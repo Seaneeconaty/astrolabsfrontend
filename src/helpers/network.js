@@ -2,7 +2,7 @@ import { getToken } from "./authentication";
 
 function loginRequest({email, password}){
   return new Promise((resolve, reject) => {
-    fetch("http://localhost:5000/users/login", {
+    fetch("https://astrolabsbackendv8.herokuapp.com/users/login", {
       method: "post",
       headers: {
         "Content-Type": "application/json; charset=utf-8"
@@ -25,7 +25,7 @@ function loginRequest({email, password}){
 
 function registerRequest({email, password,name}){
   return new Promise((resolve, reject) => {
-    fetch("http://localhost:5000/users/register", {
+    fetch("https://astrolabsbackendv8.herokuapp.com/users/register", {
       method: "post",
       headers: {
         "Content-Type": "application/json; charset=utf-8"
@@ -50,7 +50,7 @@ function registerRequest({email, password,name}){
 
 function getDashboard(){
   return new Promise((resolve, reject) => {
-    fetch("http://localhost:5000/dashboard", {
+    fetch("https://astrolabsbackendv8.herokuapp.com/dashboard", {
       headers: {
        'Authorization': getToken() 
       }
